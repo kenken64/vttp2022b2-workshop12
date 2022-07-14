@@ -19,5 +19,12 @@
         <input type="submit" value="Generate"/>
     </p>
     </form>
+
+    <br>
+    <h1>Your list of <span th:text="${numberRandomNum}"></span> random numbers</h1>
+    <ul th:each="numValImg : ${randNoResult}">
+        <li th:text="${numValImg}"></li>
+        <img th:src="@{${'/images/' + numValImg}}" width=200 height=200/>
+    </ul>
 </body>
 </html>
